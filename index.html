@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+	<body>
+		<div id="head">
+			<table>
+				<tr>
+					<td>
+						<h1>&nbspAlexandre Varella</h1>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id='nav' :style="{backgroundColor:color,'width':count+'%'}">
+			<h1></h1>
+		</div>
+		<div id='app' :style='{backgroundColor:color2}'>
+			<table align='center' style='min-height: 120vh' v-scroll="distance" >
+				<tr>
+					<td>
+						<table align='left'>
+							<tr>
+								<td v-html="message" :style='{color:color3}' >
+								</td>
+								<td></td>
+								<td v-html='foto' :style='{color:color3}'>
+								</td>
+							</tr>
+							<tr>
+								
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
