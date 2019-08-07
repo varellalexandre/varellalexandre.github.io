@@ -25,7 +25,8 @@ var app = new Vue({
     color3: '',
     count: 0,
     message:'',
-    foto:''
+    foto:'',
+    text:''
 	},methods:{
     distance: function(element){
       var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -44,7 +45,7 @@ var app = new Vue({
           g = 255;
           b = vm.count*2.55;
           vm.color3 = 'rgba(255,255,255,'+(1-(100-vm.count)/33.3333)+')';
-          vm.foto = "<img width=100 height=100 src='https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/44932380_1897647920325959_2992166237515022336_n.jpg?_nc_cat=110&_nc_oc=AQmu05IWNPLqGKH72oPYmXmjAyhZX32L8dhcWz0AI1bu6JatLeqHnd3oiq3mMcp2QlFnzm6rqic5x_6OJLFZ5AYj&_nc_ht=scontent.fnat2-1.fna&oh=46c7356bfd7febdc001253e5d91ebe59&oe=5DE15726'>"
+          vm.foto = "<img width=250 height=250 src='https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/44932380_1897647920325959_2992166237515022336_n.jpg?_nc_cat=110&_nc_oc=AQmu05IWNPLqGKH72oPYmXmjAyhZX32L8dhcWz0AI1bu6JatLeqHnd3oiq3mMcp2QlFnzm6rqic5x_6OJLFZ5AYj&_nc_ht=scontent.fnat2-1.fna&oh=46c7356bfd7febdc001253e5d91ebe59&oe=5DE15726'>"
           vm.message = "<h1>&nbspSobre Mim</h1> "+
                       " <p>&nbspSou aluno do 8&ordm per&iacuteodo de  Engenharia de Produ&ccedil&atildeo pela Universidade Federal do Rio Grande do Norte,<br>"+
                       " &nbspcom interesses em pesquisa operacional, otimiza&ccedil&atildeo e aprendizado de m&aacutequina. Fa&ccedilo pesquisa no HEII  <br> "+
@@ -57,14 +58,18 @@ var app = new Vue({
           vm.color3 = 'rgba(255,255,255,'+(1-(100-vm.count)/33.3333)+')';
           vm.message = "";
           vm.foto = "";
+          text = 'Bem';
         }else if(vm.count>=33.33){
           r = 255;
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
+          text = 'Tudo';
         }else{
           r = Math.floor(vm.count*7.65);
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
+          text = 'Olá';
+
         }
         vm.color = 'rgb('+b+','+g+','+r+')';
         nav.color = vm.color;
