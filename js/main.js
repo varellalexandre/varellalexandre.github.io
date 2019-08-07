@@ -69,7 +69,7 @@ var app = new Vue({
           r = Math.floor(vm.count*7.65);
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
-          vm.text = 'Engenharia';
+          vm.text = 'Alexandre Varella';
 
         }
         vm.color = 'rgb('+b+','+g+','+r+')';
