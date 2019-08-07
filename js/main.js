@@ -50,7 +50,8 @@ var app = new Vue({
                       " <p>&nbspSou aluno do 8&ordm per&iacuteodo de  Engenharia de Produ&ccedil&atildeo pela Universidade Federal do Rio Grande do Norte,<br>"+
                       " &nbspcom interesses em pesquisa operacional, otimiza&ccedil&atildeo e aprendizado de m&aacutequina. Fa&ccedilo pesquisa no HEII  <br> "+
                       "&nbsp(Healthcare, Engineering and Industrial Innovation). Tenho experi&ecircncia em programa&ccedil&atildeo nas linguagens <br>&nbspPython, Matlab, C, C++, Java e Javascript.<br><br>"+
-                      "<a class='btn' href='https://www.github.com/varellalexandre'>Meu Reposit&oacuterio</a><a class='btn' href='https://www.linkedin.com/in/alexandre-varella-93b6b8140/e'>Meu linkedin</a>";
+                      "<a class='btn' href='https://www.github.com/varellalexandre'>Meu Reposit&oacuterio</a><a class='btn' href='https://www.linkedin.com/in/alexandre-varella-93b6b8140/e'>Meu linkedin</a>";  
+          vm.text = '';
         }else if(vm.count >=66.66){
           r = 255;
           g = 255;
@@ -58,17 +59,17 @@ var app = new Vue({
           vm.color3 = 'rgba(255,255,255,'+(1-(100-vm.count)/33.3333)+')';
           vm.message = "";
           vm.foto = "";
-          vm.text = 'Bem';
+          vm.text = 'Programação';
         }else if(vm.count>=33.33){
           r = 255;
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
-          vm.text = 'Tudo';
+          vm.text = 'Otimização';
         }else{
           r = Math.floor(vm.count*7.65);
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
-          vm.text = 'Olá';
+          vm.text = 'Engenharia';
 
         }
         vm.color = 'rgb('+b+','+g+','+r+')';
