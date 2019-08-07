@@ -63,12 +63,12 @@ var app = new Vue({
           r = 255;
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
-          text = 'Tudo';
+          vm.text = 'Tudo';
         }else{
           r = Math.floor(vm.count*7.65);
           g = Math.floor(vm.count*5.1);
           b = Math.floor(vm.count*2.55);
-          text = 'Olá';
+          vm.text = 'Olá';
 
         }
         vm.color = 'rgb('+b+','+g+','+r+')';
