@@ -44,7 +44,7 @@ var app = new Vue({
           g = 255;
           b = vm.count*2.55;
           vm.color3 = 'rgba(255,255,255,'+(1-(100-vm.count)/33.3333)+')';
-          vm.foto = "<img src='https://i.imgsafe.org/69/69b475a0f7.jpeg'>"
+          vm.foto = "<img src='https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/44932380_1897647920325959_2992166237515022336_n.jpg?_nc_cat=110&_nc_oc=AQmu05IWNPLqGKH72oPYmXmjAyhZX32L8dhcWz0AI1bu6JatLeqHnd3oiq3mMcp2QlFnzm6rqic5x_6OJLFZ5AYj&_nc_ht=scontent.fnat2-1.fna&oh=46c7356bfd7febdc001253e5d91ebe59&oe=5DE15726'>"
           vm.message = "<h1>&nbspSobre Mim</h1> "+
                       " <p>&nbspSou aluno do 8&ordm per&iacuteodo de  Engenharia de Produ&ccedil&atildeo pela Universidade Federal do Rio Grande do Norte,<br>"+
                       " &nbspcom interesses em pesquisa operacional, otimiza&ccedil&atildeo e aprendizado de m&aacutequina. Fa&ccedilo pesquisa no HEII  <br> "+
