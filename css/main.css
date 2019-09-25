@@ -1,13 +1,21 @@
 body {
 	margin:0px;
 	font-family: 'Rajdhani', sans-serif;
-	background-color:rgba(255,255,255,0);
+	background-color:rgba(244,238,237,1);
 	background-attachment: fixed;
-	background-image: url('https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/17098213_1261532160604208_1712921872740270559_n.jpg?_nc_cat=102&_nc_oc=AQnWlM1QrKrGR5Sfb-5FxZfXPpE1IkHAxQDdnhTSeFb1cb6yf8k8LHcbzLnTeJ9HEupl36wg6tHwvvN8Vfts10jO&_nc_ht=scontent.fnat2-1.fna&oh=e5551a5320bca0a6277ced90bc6fadd8&oe=5DDA1D7A');
 	background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center;
 }
+#github{
+  color: #fff;
+  height: 176px;
+  background: url('https://instagram.fnat2-1.fna.fbcdn.net/vp/ed510febfb5ec8d3680044bb3d3a5b80/5E2CBDA2/t51.2885-15/e35/11349161_812252998852814_108867522_n.jpg?_nc_ht=instagram.fnat2-1.fna.fbcdn.net&_nc_cat=102') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+canvas { display:block;border-radius: 7.5px; }
 #nav {
 	max-height:3px;
 	position:fixed;
