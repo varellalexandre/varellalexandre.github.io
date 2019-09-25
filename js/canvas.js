@@ -1,8 +1,15 @@
 (function() {
     var canvas = document.getElementById('canvas');
+    var horas = document.getElementById('horas');
+    var pecas = document.getElementById('pecas');
+    var botao_calculo = document.getElementById('calcular');
+    var botao_comsoal = document.getElementById('calcular_comsoal');
+    var postos = null;
     var raio = 25;
     var selecionadas = null;
     var start = 65;
+    var takt = null;
+    var dialog = document.getElementById('dialog');
     context = canvas.getContext('2d');
     atividades = [];
     last_mouse_click = {}
@@ -12,6 +19,37 @@
     canvas.addEventListener("mousemove",drag,false);
     canvas.addEventListener("mouseup",desmarca,false);
     canvas.addEventListener("dblclick",del,false);
+    botao_calculo.addEventListener("mousedown",calcula_valor,false);
+    botao_comsoal.addEventListener("mousedown",calcula_comsoal,false);
+    function calcula_comsoal(){
+        soma_tempo = 0;
+        for(var i = 0; i<atividades.length;++i){
+            atividades[i]['tempo'] = parseFloat(document.getElementById('valor'+i).value);
+            soma_tempo += atividades[i]['tempo'];
+        }
+        alert(soma_tempo/takt);
+    }
+    function remove_rows(table){
+        for(var i = table.rows.length ; i>1 ;i--){
+            table.deleteRow(i-1);
+        }
+    }
+    function calcula_valor(event){
+        takt = horas.value/pecas.value;
+        table = document.getElementById('comsoal');
+        remove_rows(table);
+        for(var i = 0;i<atividades.length;i++){
+            var  nrow = table.insertRow(table.rows.length); 
+            var Newcell1 = nrow.insertCell(0); 
+            var Newcell2 = nrow.insertCell(1); 
+            var Newcell3 = nrow.insertCell(2);
+            Newcell1.innerHTML = atividades[i]['letter']; 
+            Newcell2.innerHTML = 'Elementos '+atividades[i]['predecessores'].toString(); 
+            Newcell3.innerHTML = "<input class='mdl-textfield__input' type='number' step=0.01 id='valor"+i+"'/>";
+        }
+        table.style.display = 'table';
+        botao_comsoal.style.display = 'inline'
+    }
     function nearestPoint(A,B){
     	x = A['x'] + A['r']*((B['x']-A['x'])/Math.sqrt(Math.pow((B['x']-A['x']),2)+Math.pow((B['y']-A['y']),2)));
     	y = A['y'] + A['r']*((B['y']-A['y'])/Math.sqrt(Math.pow((B['x']-A['x']),2)+Math.pow((B['y']-A['y']),2)));
@@ -113,7 +151,8 @@
     		'x':last_mouse_click['x'],
     		'r':raio*cssScaleX,
     		'color':'rgb(48,47,47)',
-    		'moving':false
+    		'moving':false,
+            'tempo':null
     	}
     	count = 0;
     	for(var i = 0; i<atividades.length;i++){

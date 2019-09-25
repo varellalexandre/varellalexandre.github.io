@@ -250,6 +250,18 @@
 				</td>
 			</tr>
 		</table>
+		<div style="margin:30px">
+		  	<table id='comsoal' class="mdl-data-table mdl-js-data-table" style="display:none">
+		  	    <tr>
+			      <th class="mdl-data-table__cell--non-numeric">Elemento</th>
+			      <th>Predecessores</th>
+			      <th>Tempo da Atividade</th>
+			    </tr>
+			</table>
+			<button id="calcular_comsoal" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#302f2f;display:none">
+			Utilizar o Comsoal
+			</button>
+		</div>
 		<table id="calculo" style="padding-bottom: 10vh">
 			<tr>
 				<td style="width:90%;">
@@ -270,9 +282,9 @@
 							</div>
 				  			<div class="mdl-textfield mdl-js-textfield" style="color:#302f2f">
 								<input class="mdl-textfield__input" type='number' id='pecas' step='0.1' value=''/>
-								<label class="mdl-textfield__label" for="pecas">Peças a serem produzidas</label>
+								<label class="mdl-textfield__label" for="pecas">Unidades a serem produzidas</label>
 							</div>
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#302f2f">
+							<button id="calcular" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#302f2f">
 							  Calcular
 							</button>
 						</form>
