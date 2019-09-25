@@ -7,10 +7,32 @@ body {
 	background-size: cover; 
 	background-position: center;
 }
+.demo-card-image.mdl-card {
+  width: 180px;
+  height: 180px;
+  background: url('https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/18767466_1342268085863948_5615154813461457597_n.jpg?_nc_cat=105&_nc_oc=AQkB7hzO8s-6ltgFaV4FMXWq7uLCn606DtjySAkjCBy_Gt8IQSrvPez1MhbnwRJCbXM&_nc_ht=scontent.fnat2-1.fna&oh=6505d34b38238ce1a2ccfcb86187b6ed&oe=5E3229B8') center / cover;
+  border-radius: 50%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
 #github{
   color: #fff;
   height: 176px;
-  background: url('https://instagram.fnat2-1.fna.fbcdn.net/vp/ed510febfb5ec8d3680044bb3d3a5b80/5E2CBDA2/t51.2885-15/e35/11349161_812252998852814_108867522_n.jpg?_nc_ht=instagram.fnat2-1.fna.fbcdn.net&_nc_cat=102') center / cover;
+  background: url('https://i1.wp.com/gbhackers.com/wp-content/uploads/2019/01/Github.png?w=900&ssl=1') center / cover;
+}
+#linkedin{
+  	color: #fff;
+  	height: 176px;
+ 	background: url('https://seeklogo.net/wp-content/uploads/2017/01/linkedin-logo-512x512.png') center / cover;
+}
+#mail{
+	color: #fff;
+  	height: 176px;
+  	background: url('https://kmilvix0nz42fl4d2jqa6uma-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/gmail-logo.png') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
