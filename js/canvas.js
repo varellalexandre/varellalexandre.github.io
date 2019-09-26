@@ -11,7 +11,10 @@
     var takt = null;
     var dialog = document.getElementById('dialog');
     context = canvas.getContext('2d');
-    atividades = [];
+    atividades = JSON.parse(localStorage.getItem('grafo'));
+    if(atividades == null){
+        atividades = [];
+    }
     last_mouse_click = {}
     // resize the canvas to fill browser window dynamically
     window.addEventListener('resize', resizeCanvas, false);
@@ -23,11 +26,51 @@
     botao_comsoal.addEventListener("mousedown",calcula_comsoal,false);
     function calcula_comsoal(){
         soma_tempo = 0;
+        lista_posto = []
+        lista_a = []
+        lista_b = []
         for(var i = 0; i<atividades.length;++i){
             atividades[i]['tempo'] = parseFloat(document.getElementById('valor'+i).value);
+            lista_a.push({
+                'id':i,
+                'predecessores':atividades[i]['predecessores'].length
+            });
+            if(atividades[i]['predecessores'].length == 0){
+                lista_b.push({
+                    'id':i
+                })
+            }
             soma_tempo += atividades[i]['tempo'];
         }
-        alert(soma_tempo/takt);
+        localStorage['grafo'] = JSON.stringify(atividades);
+        postos_de_trabalho = Math.ceil(soma_tempo/takt);
+        for(var i = 0; i<postos_de_trabalho;i++){
+            lista_posto.push([]);
+        }
+        while(lista_a.length > 0){
+            for(var i = 0; i<lista_b.length;i++){
+                disponiveis = lista_disponiveis(lista_posto);
+                id_lista = Math.round(Math.random()*(disponiveis.length-1));
+                //calcular os predecessores
+            }
+        }
+    }
+    function lista_disponiveis(lista){
+        lista_retorno = [];
+        for(var i = 0;i<lista.length;i++){
+            if(soma_tempo(lista[i])<takt){
+                lista_retorno.push(i)
+            }
+        }
+        return lista_retorno;
+
+    }
+    function soma_tempo(lista){
+        var soma = 0;
+        for(var i;i<lista.length;i++){
+            soma += lista[i]['tempo'];
+        }
+        return soma;
     }
     function remove_rows(table){
         for(var i = table.rows.length ; i>1 ;i--){
@@ -45,7 +88,7 @@
             var Newcell3 = nrow.insertCell(2);
             Newcell1.innerHTML = atividades[i]['letter']; 
             Newcell2.innerHTML = 'Elementos '+atividades[i]['predecessores'].toString(); 
-            Newcell3.innerHTML = "<input class='mdl-textfield__input' type='number' step=0.01 id='valor"+i+"'/>";
+            Newcell3.innerHTML = "<input class='mdl-textfield__input' type='number' value="+atividades[i]['tempo']+" step=0.01 id='valor"+i+"'/>";
         }
         table.style.display = 'table';
         botao_comsoal.style.display = 'inline'
