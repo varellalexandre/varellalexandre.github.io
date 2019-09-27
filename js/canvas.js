@@ -30,7 +30,7 @@
             atividades[i]['tempo'] = parseFloat(document.getElementById('valor'+i).value);
             soma_tempo += atividades[i]['tempo'];
         }
-        localStorage['grafo'] = JSON.stringify(atividades);
+        //localStorage['grafo'] = JSON.stringify(atividades);
         postos_de_trabalho = Math.ceil(soma_tempo/takt);
         melhor = {'eficiencia':-1,
                   'solucao':null
@@ -272,7 +272,7 @@
     		col = colision(atividades[i],aux);
     		if(col != 0){
     			count += 1;
-    			if(atividades[i]['color'] === 'rgb(48,47,47)' && col === 1){
+    			if(atividades[i]['color'] == 'rgb(48,47,47)' && col == 1){
     				if(selecionadas != null){
     					connect(atividades[i]);
     					atividades[selecionadas]['color'] = 'rgb(48,47,47)';
@@ -282,7 +282,7 @@
     					atividades[i]['color'] = 'rgb(87,30,27)';
     					selecionadas = i;
     				}
-    			}else if(col === 1){
+    			}else if(col == 1){
     				atividades[i]['moving'] = true;
     				if(selecionadas != null){
     					connect(atividades[i]);
@@ -295,7 +295,7 @@
     		}else{
     			continue;
     		}
-    	}if(count === 0){
+    	}if(count == 0){
     		atividades.push(aux);
     	}
 		reset();

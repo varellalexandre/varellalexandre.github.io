@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
     var proj = document.getElementById('proj');
     var sobre = document.getElementById('sobremim');
     proj.addEventListener("mousedown",change_page,false);
@@ -23,4 +23,4 @@
         canva.style.display = 'none';
         page1.style.display = 'block';
     }
-})();
+})();*/
