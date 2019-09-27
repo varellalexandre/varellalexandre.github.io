@@ -1,13 +1,79 @@
 body {
 	margin:0px;
 	font-family: 'Rajdhani', sans-serif;
-	background-color:rgba(255,255,255,0);
+	background-color:rgba(244,238,237,1);
 	background-attachment: fixed;
-	background-image: url('https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/17098213_1261532160604208_1712921872740270559_n.jpg?_nc_cat=102&_nc_oc=AQnWlM1QrKrGR5Sfb-5FxZfXPpE1IkHAxQDdnhTSeFb1cb6yf8k8LHcbzLnTeJ9HEupl36wg6tHwvvN8Vfts10jO&_nc_ht=scontent.fnat2-1.fna&oh=e5551a5320bca0a6277ced90bc6fadd8&oe=5DDA1D7A');
 	background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center;
 }
+.demo-card-image.mdl-card {
+  width: 180px;
+  height: 180px;
+  background: url('https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/18767466_1342268085863948_5615154813461457597_n.jpg?_nc_cat=105&_nc_oc=AQkB7hzO8s-6ltgFaV4FMXWq7uLCn606DtjySAkjCBy_Gt8IQSrvPez1MhbnwRJCbXM&_nc_ht=scontent.fnat2-1.fna&oh=6505d34b38238ce1a2ccfcb86187b6ed&oe=5E3229B8') center / cover;
+  border-radius: 50%;
+}
+.mdl-dialog {
+	border: none;
+	box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+	width: 280px; }
+.mdl-dialog__title {
+	padding: 24px 24px 0;
+	margin: 0;
+	font-size: 2.5rem; }
+.mdl-dialog__actions {
+	padding: 8px 8px 8px 24px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+.mdl-dialog__actions > * {
+	margin-right: 8px;
+	height: 36px; }
+.mdl-dialog__actions > *:first-child {
+	margin-right: 0; }
+.mdl-dialog__actions--full-width {
+	padding: 0 0 8px 0; }
+.mdl-dialog__actions--full-width > * {
+	height: 48px;
+	-webkit-flex: 0 0 100%;
+	    -ms-flex: 0 0 100%;
+	        flex: 0 0 100%;
+	padding-right: 16px;
+	margin-right: 0;
+	text-align: right; }
+.mdl-dialog__content {
+padding: 20px 24px 24px 24px;
+color: rgba(0,0,0, 0.54); }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+#github{
+  color: #fff;
+  height: 176px;
+  background: url('https://i1.wp.com/gbhackers.com/wp-content/uploads/2019/01/Github.png?w=900&ssl=1') center / cover;
+}
+#linkedin{
+  	color: #fff;
+  	height: 176px;
+ 	background: url('https://seeklogo.net/wp-content/uploads/2017/01/linkedin-logo-512x512.png') center / cover;
+}
+#mail{
+	color: #fff;
+  	height: 176px;
+  	background: url('https://kmilvix0nz42fl4d2jqa6uma-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/gmail-logo.png') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+canvas { display:block;border-radius: 7.5px; }
 #nav {
 	max-height:3px;
 	position:fixed;
