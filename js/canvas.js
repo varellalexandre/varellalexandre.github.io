@@ -59,7 +59,7 @@
                 melhor['solucao'] = JSON.parse(JSON.stringify(lista_posto));
             }
         }
-        var imgData = canvas.toDataURL("image/jpeg", 1.0);
+        var imgData = canvas.toDataURL();
         var pdf = new jsPDF();
         tabel = [];
         for(var i = 0;i<melhor['solucao'].length;i++){
@@ -144,7 +144,7 @@
             var Newcell2 = nrow.insertCell(1); 
             var Newcell3 = nrow.insertCell(2);
             Newcell1.innerHTML = atividades[i]['letter']; 
-            Newcell2.innerHTML = 'Elementos '+atividades[i]['predecessores'].toString(); 
+            Newcell2.innerHTML = '{'+atividades[i]['predecessores'].toString()+"}"; 
             Newcell3.innerHTML = "<input class='mdl-textfield__input' type='number' value="+atividades[i]['tempo']+" step=0.01 id='valor"+i+"'/>";
         }
         table.style.display = 'table';
@@ -279,7 +279,7 @@
     					atividades[i]['color'] = 'rgb(48,47,47)';
     					selecionadas = null;
     				}else{
-    					atividades[i]['color'] = 'rgb(87,30,27)';
+    					atividades[i]['color'] = 'rgb(106,209,144)';
     					selecionadas = i;
     				}
     			}else if(col == 1){
